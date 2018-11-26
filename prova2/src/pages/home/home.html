@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Pedro Pongelupe - 577028</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Customers</h2>
+  <ion-list>
+    <ion-item *ngFor="let customer of (customers$ | async)" (click)="customerSelected($event, customer)">
+      <h2 *ngIf="customer.individual;else user">{{customer.individual.firstName}} {{customer.individual.lastName}}</h2>
+      <ng-template #user>
+        <h2>Customer</h2>
+      </ng-template>
+      <p>{{customer.city}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

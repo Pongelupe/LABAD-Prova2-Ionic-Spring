@@ -1,0 +1,13 @@
+{
+  "name": "prova2",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://cors.api.com/api"
+    }
+  ],
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
